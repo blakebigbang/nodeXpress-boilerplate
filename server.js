@@ -1,6 +1,11 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const logger = require('morgan');
 const chalk = require('chalk');
+const helmet = require('helmet');
+const expressValidator = require('express-validator');
+const compression = require('compression');
+const bodyParser = require('body-parser');
 
 /**
  * Load environment variables
@@ -22,6 +27,13 @@ const server = express();
  */
 server.set('host', '0.0.0.0');
 server.set('port', process.env.PORT || 8080);
+server.use(logger('dev'));
+server.use(helmet());
+server.use(logger('dev'));
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: true }));
+server.use(expressValidator());
+server.use(compression());
 
 /**
  * API routes

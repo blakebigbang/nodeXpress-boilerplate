@@ -29,7 +29,6 @@ server.set('host', '0.0.0.0');
 server.set('port', process.env.PORT || 8080);
 server.use(logger('dev'));
 server.use(helmet());
-server.use(logger('dev'));
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(expressValidator());

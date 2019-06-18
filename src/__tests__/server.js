@@ -4,7 +4,7 @@ const server = require('../../server');
 describe('Index Route / Health Check', () => {
   test('GET / should return 200', async () => {
     const res = await request(server).get('/');
-    console.log(res);
+
     expect(res.statusCode).toBe(200);
   });
 

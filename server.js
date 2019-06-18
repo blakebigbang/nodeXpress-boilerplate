@@ -16,7 +16,7 @@ dotenv.config();
 /**
  * Controllers
  */
-const indexRouter = require('./src/routes/index');
+const indexRouter = require('./server/routes/index');
 
 /**
  * Create Express server

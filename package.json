@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node ./server.js"
   },
   "dependencies": {
+    "chalk": "^2.4.2",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "morgan": "^1.9.1"

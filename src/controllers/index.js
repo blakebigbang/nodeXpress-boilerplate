@@ -2,7 +2,7 @@
  * GET /api
  *
  */
-exports.index = (req, res) => {
+exports.indexController = (req, res) => {
   if (req.query && req.query.error) {
     const err = new Error('There was an error!');
     err.statusCode = 444;

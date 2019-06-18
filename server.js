@@ -16,7 +16,7 @@ dotenv.config();
 /**
  * Controllers
  */
-const apiController = require('./src/controllers/api');
+const indexController = require('./src/controllers');
 
 /**
  * Create Express server
@@ -38,7 +38,7 @@ server.use(compression());
 /**
  * API routes
  */
-server.get('/', apiController.index);
+server.get('/', indexController.index);
 
 /**
  * Start server

@@ -43,7 +43,6 @@ server.get('/', indexController.index);
 /**
  * Start server
  */
-
 // `supertest` will start server automatically, so no need to start in test env
 if (process.env.NODE_ENV !== 'test') {
   server.listen(server.get('port'), () => {
